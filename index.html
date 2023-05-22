@@ -29,7 +29,7 @@
             <div id="new-task">
 
                 <!-- INPUT TO WRITE WHAT TO ADD -->
-                <input type="text" placeholder=" New task here" v-model = "newTask">
+                <input type="text" placeholder=" New task here" v-model = "newTask" @keyup.enter = "addTask">
 
                 <!-- BUTTON TO ADD -->
                 <button @click = "addTask">
