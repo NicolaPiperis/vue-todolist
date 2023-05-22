@@ -59,3 +59,9 @@ body{
 .fa-solid{
     cursor: pointer;
 }
+.done{
+    text-decoration: line-through;
+}
+span{
+    cursor: pointer;
+}

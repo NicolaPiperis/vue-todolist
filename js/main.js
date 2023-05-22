@@ -9,7 +9,7 @@ createApp({
             items : [
                 {
                     text : "Fare il letto",
-                    done : true
+                    done : false
                 },
                 {
                     text : "Lavare il Bagno",
@@ -17,11 +17,11 @@ createApp({
                 },
                 {
                     text : "Andare in palestra",
-                    done : true
+                    done : false
                 },
                 {
                     text : "Ritirare le analisi del sangue dall clinica",
-                    done : true
+                    done : false
                 },
                 {
                     text : "Studiare",
@@ -32,7 +32,21 @@ createApp({
     },
     methods: {
         addTask() {
-            this.items.push(this.newTask);
+           if(this.newTask !== "") {
+                this.items.unshift({
+                    text : this.newTask,
+                    done : false
+                });
+                this.newTask = "";
+           }
+        },
+        doneButton(idx) {
+            this.items.done = true;
+            console.log(this.items[idx].done);
+            console.log(idx);
+        },
+        removeTask(idx) {
+            this.items.splice(idx,1);
         }
     }
 
