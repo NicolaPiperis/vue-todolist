@@ -47,7 +47,7 @@
             <ul class="list-group list-group-flush to-do">
                 <li class="list-group-item delate-list"
                 v-for = "(task, idx) in items">
-                    <span @click = "doneButton(idx)" :class = "this.items.done === true ? 'done' : '' ">{{ task.text }}</span>
+                    <span @click = "doneButton(idx)" :class = "this.items[idx].done === true ? 'done' : '' ">{{ task.text }}</span>
                     <i @click = "removeTask(idx)" class="fa-solid fa-xmark" style="color: #000000;"></i>
                 </li>
             </ul>
