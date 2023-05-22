@@ -3,3 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #04001e;
+}
+
+/* HEADER STYLE */
+
+#logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 200px;
+    margin: 100px 0;
+}
+
+#new-task{
+    text-align: center;
+}
+
+#new-task input{
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+#new-task button{
+    margin-left: 35px;
+    width: 80px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(32, 189, 32);
+}
